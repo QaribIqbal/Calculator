@@ -8,7 +8,13 @@ Array.from(buttons).forEach((btn) => {
             string=eval(string);
             document.getElementById("screen").value=string;
         }
-     else if( e.target.innerHTML=="C"){
+        else if(e.target.innerHTML=="&lt;")
+        {
+            string = String(string);
+            string=string.slice(0,-1);
+            document.getElementById("screen").value=string;
+        }
+        else if( e.target.innerHTML=="C"){
             string="";
             document.getElementById("screen").value=string;
         }
